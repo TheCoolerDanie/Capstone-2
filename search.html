@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Park Lot</title>
+    <script src="scripts\nationalParkData.js"></script>
+</head>
+<body>
+    <form action="#" id="filters">
+        <label for="search">Search</label>
+        <input type="search" name="search" id="search"/>
+        <button id="searchPark"> Search</button>
+    </form>
+    <div id="searchresult"></div>
+    <script>
+            //get this to work
+searchPark.addEventListener('click', parkSearchGo)
+function parkSearchGo(){
+
+}
+// replace with own code at some point
+const searchField = document.querySelector('#search');
+const searchResultsContainer = document.querySelector('#searchresult');
+    
+searchField.addEventListener('input', (e) => {
+  
+  // if input field is empty, clear the search results
+  if(e.target.value === '') {
+     searchResultsContainer.innerHTML = '';
+     return;
+  }
+  
+  // filter the meals array
+  const searchResults = nationalParksArray.filter(park => {
+      return park.LocationName.toLowerCase().includes(e.target.value.toLowerCase());
+  });
+  
+  // before displaying the search results, clear the search results div
+  searchResultsContainer.innerHTML = '';
+  
+  // display the titles of the meal objects that include the text entered in input field
+  searchResults.forEach((element, index) => {
+     const p = document.createElement('p');
+     p.textContent =element.LocationName;
+     searchResultsContainer.appendChild(p);
+  });
+});
+    </script>
+    
+</body>
+</html>
