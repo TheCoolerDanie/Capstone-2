@@ -1,12 +1,13 @@
 .rock1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border:10px rgb(228, 17, 101) solid;
-    background-color:rgb(191, 19, 88);
+    border:10px rgb(102, 185, 64) solid;
+    background-color:rgb(88, 148, 64);
     font-style: italic;
-    color: rgb(249, 177, 203);
-   
+    color: rgb(72, 75, 75);
+
+    margin-top: 1%;
         position:relative;
-        width: 350px;
+        width: 220px;
         height: auto;
         overflow:hidden;
         clip-path: polygon(
@@ -26,10 +27,11 @@
 
 .rock2{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border:10px rgb(165, 17, 76) solid;
-    width: 250px;
-    background-color:rgb(138, 17, 66);
-    color: rgb(249, 177, 203);
+    border:10px rgb(102, 185, 64) solid;
+    background-color:rgb(88, 148, 64);
+    color: rgb(72, 75, 75);
+    width: 180px;
+    margin-top: 1%;
     position:relative;
     overflow:hidden;
     clip-path: polygon(
@@ -45,13 +47,11 @@
 }
 .rock3{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                border:10px rgb(165, 17, 76) solid;
-                background: -moz-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: -webkit-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: -o-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: t(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: linear-gradient(0deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                font-size: 18px;
+    border:10px rgb(102, 185, 64) solid;
+    background-color:rgb(136, 206, 108);
+    margin-top: 1%;
+    max-width: 95%;
+    color: rgb(37, 37, 37);
                 
 }
 .rock0{
@@ -88,10 +88,10 @@
                   0% 10%)
 }
 a:link {
-    color: rgb(204, 49, 106);
+    color: rgb(201, 255, 166);
   }
   a:visited {
-    color: rgb(196, 32, 92);
+    color: rgb(183, 202, 181);
   }
 .rock6{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -113,4 +113,19 @@ a:link {
 }
 .rocktext {
   width: 50px;}
-  
+
+  .topnav{
+    max-width: 75%;
+    background-color: darkblue;
+  }
+  .parkInput {
+    background-color: rgb(77, 168, 138);
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .results{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 5%;
+    max-width: 75%;
+  }

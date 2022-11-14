@@ -5,15 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Park Lot</title>
-    <script src="scripts\nationalParkData.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="scripts\locationData.js"></script>
+    <script src="scripts\parkTypeData.js"></script>
 </head>
 <body>
-    <form action="#" id="filters">
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="mountain.html">Mountains</a>
+        <a href="search.html">Search for Parks</a>
+      </div>
+      <form action="/action_page.php">
+        <label for="locat">Choose a Location</label>
+        <select name="location1" id="location1">
+          <option value="">Default</option>
+        </select>
+        <br><br>
+
+      </form>
+      <form action="/action_page.php">
+        <label for="locat2">Choose a Type</label>
+        <select name="location2" id="location2">
+          <option value="">Default</option>
+        </select>
+        <br><br>
+
+      </form>
+      
+<script>
+    let locatMenu=document.getElementById('location1')
+// let moreInfoBtn=document.getElementById('moreInfo')
+let locatAmount=locationsArray.length;
+for (let i=0;i<locatAmount;i++){
+    let option= new Option(locationsArray[i])
+    locatMenu.appendChild(option)
+}
+let locatMenu2=document.getElementById('location2')
+// let moreInfoBtn=document.getElementById('moreInfo')
+let locatAmount2=parkTypesArray.length;
+for (let i=0;i<locatAmount2;i++){
+    let option= new Option(parkTypesArray[i])
+    locatMenu2.appendChild(option)
+}
+</script>
+</body>
+<!-- <body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="mountain.html">Mountains</a>
+        <a href="search.html">Search for Parks</a>
+      </div>
+    <form action="#" id="filters" class="parkInput">
         <label for="search">Search</label>
         <input type="search" name="search" id="search"/>
         <button id="searchPark"> Search</button>
     </form>
-    <div id="searchresult"></div>
+
+
+    <div id="searchresult" class="results"></div>
     <script>
             //get this to work
 searchPark.addEventListener('click', parkSearchGo)
@@ -49,5 +99,5 @@ searchField.addEventListener('input', (e) => {
 });
     </script>
     
-</body>
+</body> -->
 </html>
