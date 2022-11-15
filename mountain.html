@@ -27,9 +27,32 @@
             let nameLi= document.createElement('ul') 
             let a= i+1
             list.appendChild(nameLi).innerText=`${a} ${mountainsArray[i].name}`;
+            //image tag that wont work
+            let imgLiFix= document.createElement('li');
+            let imgLi= document.createElement('img');
+            let imageSrc=`images/${mountainsArray[i].img}`;
+            console.log(imageSrc);
+
+            imgLi.src =imageSrc;
+            imgLiFix.appendChild(imgLi);
+
+            //desc
+            let descLi= document.createElement('li')
+            nameLi.appendChild(descLi).innerText=mountainsArray[i].desc;
+
+            nameLi.appendChild(descLi).innerText=mountainsArray[i].desc;
+            let eleLi= document.createElement('li')
+         
+            nameLi.appendChild(eleLi).innerText=`Elevation: ${mountainsArray[i].elevation}`;
+
             let effortLi= document.createElement('li')
          
-            nameLi.appendChild(effortLi).innerText=mountainsArray[i].effort;
+             nameLi.appendChild(effortLi).innerText=`Effort to climb: ${mountainsArray[i].effort}`;
+            
+             let breakLi= document.createElement('p')
+         
+         nameLi.appendChild(breakLi).innerText=" ";
+
         console.log("cycle amount")
     }}
         window.onload=bigRocks

@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="scripts\locationData.js"></script>
     <script src="scripts\parkTypeData.js"></script>
+    <script src="scripts\nationalParkData.js"></script>
 </head>
 <body>
     <div class="topnav">
@@ -32,6 +33,9 @@
         <br><br>
 
       </form>
+      <h1>Park List</h1>
+      <ol>
+      </ol>
       
 <script>
     let locatMenu=document.getElementById('location1')
@@ -48,56 +52,38 @@ for (let i=0;i<locatAmount2;i++){
     let option= new Option(parkTypesArray[i])
     locatMenu2.appendChild(option)
 }
+
+console.log(nationalParksArray)
+    function parkSearch(){
+        let amount=nationalParksArray.length;
+        for (let i=0;i<amount;i++){
+            let list = document.querySelector('ol')
+            let nameLi= document.createElement('ul') 
+            list.appendChild(nameLi).innerText=nationalParksArray[i].LocationName;
+
+//           // replace with own code at some point
+// const searchField = document.querySelector('#location1');
+// const searchResultsContainer = document.querySelector('#searchresult');
+    
+// searchField.addEventListener('input', (e) => {
+
+//   // filter the meals array
+//   const searchResults = nationalParksArray.filter(park => {
+//       return park.State.toLowerCase().includes(location1);
+//   });
+  
+//   // display the titles of the meal objects that include the text entered in input field
+//   searchResults.forEach((element, index) => {
+//      const p = document.createElement('p');
+//      p.textContent =element.State;
+//      searchResultsContainer.appendChild(p);
+//      console.log(searchResults,searchResultsContainer)
+//   });
+// });
+        }}
+        window.onload=parkSearch
+        
 </script>
 </body>
-<!-- <body>
-    <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="mountain.html">Mountains</a>
-        <a href="search.html">Search for Parks</a>
-      </div>
-    <form action="#" id="filters" class="parkInput">
-        <label for="search">Search</label>
-        <input type="search" name="search" id="search"/>
-        <button id="searchPark"> Search</button>
-    </form>
 
-
-    <div id="searchresult" class="results"></div>
-    <script>
-            //get this to work
-searchPark.addEventListener('click', parkSearchGo)
-function parkSearchGo(){
-
-}
-// replace with own code at some point
-const searchField = document.querySelector('#search');
-const searchResultsContainer = document.querySelector('#searchresult');
-    
-searchField.addEventListener('input', (e) => {
-  
-  // if input field is empty, clear the search results
-  if(e.target.value === '') {
-     searchResultsContainer.innerHTML = '';
-     return;
-  }
-  
-  // filter the meals array
-  const searchResults = nationalParksArray.filter(park => {
-      return park.LocationName.toLowerCase().includes(e.target.value.toLowerCase());
-  });
-  
-  // before displaying the search results, clear the search results div
-  searchResultsContainer.innerHTML = '';
-  
-  // display the titles of the meal objects that include the text entered in input field
-  searchResults.forEach((element, index) => {
-     const p = document.createElement('p');
-     p.textContent =element.LocationName;
-     searchResultsContainer.appendChild(p);
-  });
-});
-    </script>
-    
-</body> -->
 </html>
