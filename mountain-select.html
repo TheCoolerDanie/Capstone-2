@@ -1,95 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Park Lot</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="scripts\mountainData.js"></script>
 </head>
+
 <body>
-        <label for="locat">Choose a Mountain</label>
-        <select name="rock" id="rock">
-        </select>        
-        <input id="search" type="button" value="Search" onclick="mountSelec();"/>
-        <br><br>
-        <img src="" alt="">
-        <ol>
-        </ol>
 
-    
-    
-    
-    
-    
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="mountain-select.html">Mountains</a>
+        <a href="search.html">Search for Parks</a>
+    </div>
+    <label for="locat">Choose a Mountain</label>
+    <select name="rock" id="rock">
+    </select>
+    <input id="search" type="button" value="Search" onclick="mountSelec();" />
+    <br><br>
+    <a href="mountain.html">Full Mountain List</a>
+    <img src="" alt="">
+    <ol>
+    </ol>
+
     <script>
-        console.log(mountainsArray)
 
+        let locatMenu = document.getElementById('rock')
+        let locatAmount = mountainsArray.length;
+        for (let i = 0; i < locatAmount; i++) {
+            let option = new Option(mountainsArray[i].name)
+            locatMenu.appendChild(option)
+        }
+        function mountSelec() {
+            var e = document.getElementById("rock");
+            var value = e.value;
+            var text = e.options[e.selectedIndex].text;
+            console.log(text)
 
+            let result = mountainsArray.filter(obj => {
+                return obj.name === text
+            })
 
-        
+            let amount = mountainsArray.length;
+            for (let i = 0; i < amount; i++) {
+                if (mountainsArray[i].name == text) {
+                    console.log(`it worked at ${i}`)
+                    let list = document.querySelector('ol')
+                    let nameLi = document.createElement('ul')
+                    list.appendChild(nameLi).innerText = mountainsArray[i].name;
 
-        let locatMenu=document.getElementById('rock')
-        let locatAmount=mountainsArray.length;
-        for (let i=0;i<locatAmount;i++){
-        let option= new Option(mountainsArray[i].name)
-        locatMenu.appendChild(option)
-}
-        function mountSelec(){
-        var e = document.getElementById("rock");
-        var value = e.value;
-        var text = e.options[e.selectedIndex].text;
-        console.log(text)
-        
-        // var dropListVal = document.getElementById("rock");
-        // let downNum = dropListVal.options.length;
-        // console.log(dropListVal, downNum)       
+                    //image tag that wont work, figure out later
+                    // let imgLiFix = document.createElement('li');
+                    // let imgLi = document.createElement('img');
+                    // let imageSrc = `images/${mountainsArray[i].img}`;
+                    // console.log(imageSrc);
+                    // imgLi.src = imageSrc;
+                    // imgLiFix.appendChild(imgLi);
 
-        //ive been trying to get this to return a value i can use to select a part of the array
-        let result = mountainsArray.filter(obj => {
-         return obj.name === text
-        })
+                    let descLi = document.createElement('li')
+                    nameLi.appendChild(descLi).innerText = mountainsArray[i].desc;
 
-        // rv=result
-        // console.log(mountainsArray.indexOf())
+                    nameLi.appendChild(descLi).innerText = mountainsArray[i].desc;
+                    let eleLi = document.createElement('li')
 
-        
+                    nameLi.appendChild(eleLi).innerText = `Elevation: ${mountainsArray[i].elevation}`;
 
-    }
-    //         let list = document.querySelector('ol')
-    //         let nameLi= document.createElement('ul') 
-    //         list.appendChild(nameLi).innerText=mountainsArray[i].name;
-    //         //image tag that wont work
-    //         // let imgLiFix= document.createElement('li');
-    //         // let imgLi= document.createElement('img');
-    //         // let imageSrc=`images/${mountainsArray[i].img}`;
-    //         // console.log(imageSrc);
+                    let effortLi = document.createElement('li')
 
-    //         // imgLi.src =imageSrc;
-    //         // imgLiFix.appendChild(imgLi);
+                    nameLi.appendChild(effortLi).innerText = `Effort to climb: ${mountainsArray[i].effort}`;
+                    break
+                }
+                else {
+                    console.log("repeat")
+                }
+            }
 
-    //         //desc
-    //         let descLi= document.createElement('li')
-    //         nameLi.appendChild(descLi).innerText=mountainsArray[i].desc;
-
-    //         nameLi.appendChild(descLi).innerText=mountainsArray[i].desc;
-    //         let eleLi= document.createElement('li')
-         
-    //         nameLi.appendChild(eleLi).innerText=`Elevation: ${mountainsArray[i].elevation}`;
-
-    //         let effortLi= document.createElement('li')
-         
-    //          nameLi.appendChild(effortLi).innerText=`Effort to climb: ${mountainsArray[i].effort}`;
-            
-    //          let breakLi= document.createElement('p')
-         
-    //      nameLi.appendChild(breakLi).innerText=" ";
-
-    //     console.log("cycle amount")
-    // }}
+        }
 
     </script>
 </body>
+
 </html>

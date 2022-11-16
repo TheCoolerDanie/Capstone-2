@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="mountain.html">Mountains</a>
-        <a href="search.html">Search for Parks</a>
+      <a href="index.html">Home</a>
+      <a href="mountain-select.html">Mountains</a>
+      <a href="search.html">Search for Parks</a>
       </div>
       <form action="/action_page.php">
         <label for="locat">Choose a Location</label>
@@ -31,11 +31,11 @@
           <option value="">Default</option>
         </select>
         <br><br>
-
+        <input id="search" type="button" value="Search" onclick="mountSelec();" />
       </form>
       <h1>Park List</h1>
-      <ol>
-      </ol>
+      <ul>
+      </ul>
       
 <script>
     let locatMenu=document.getElementById('location1')
@@ -52,37 +52,46 @@ for (let i=0;i<locatAmount2;i++){
     let option= new Option(parkTypesArray[i])
     locatMenu2.appendChild(option)
 }
+        function mountSelec() {
+            var e = document.getElementById("location1");
+            var value = e.value;
+            var text = e.options[e.selectedIndex].text;
+            console.log(text)
 
-console.log(nationalParksArray)
-    function parkSearch(){
-        let amount=nationalParksArray.length;
-        for (let i=0;i<amount;i++){
-            let list = document.querySelector('ol')
-            let nameLi= document.createElement('ul') 
-            list.appendChild(nameLi).innerText=nationalParksArray[i].LocationName;
+            let result = nationalParksArray.filter(obj => {
+                return obj.State === text
+            })
 
-//           // replace with own code at some point
-// const searchField = document.querySelector('#location1');
-// const searchResultsContainer = document.querySelector('#searchresult');
-    
-// searchField.addEventListener('input', (e) => {
+            console.log(result)
+            let amount = nationalParksArray.length;
+            for (let i = 0; i < amount; i++) {
+                if ("Ohio" == text){
+                  window.alert("Invalid Location, Please Provide Existing State")
+                  break
+                }
+                else if (nationalParksArray[i].State == text) {
+                    console.log(`it worked at ${i}`)
+                    
+                    let list = document.querySelector('ul')
+                    let nameLi = document.createElement('ul')
+                    list.appendChild(nameLi).innerText = nationalParksArray[i].LocationName;
+         
+                    let dLi = document.createElement('li')
+                    list.appendChild(dLi).innerText = nationalParksArray[i].Address;
+                    if (nationalParksArray[i].Phone != 0){
+                    let aLi = document.createElement('li')
+                    list.appendChild(aLi).innerText = `Call us at ${nationalParksArray[i].Phone}`;
+                    }
 
-//   // filter the meals array
-//   const searchResults = nationalParksArray.filter(park => {
-//       return park.State.toLowerCase().includes(location1);
-//   });
-  
-//   // display the titles of the meal objects that include the text entered in input field
-//   searchResults.forEach((element, index) => {
-//      const p = document.createElement('p');
-//      p.textContent =element.State;
-//      searchResultsContainer.appendChild(p);
-//      console.log(searchResults,searchResultsContainer)
-//   });
-// });
-        }}
-        window.onload=parkSearch
-        
+                    let aSpace = document.createElement('li')
+                    list.appendChild(aSpace).innerText = "--------";
+                    
+                }
+                else {
+                    console.log("repeat")
+                }
+            }
+          }     
 </script>
 </body>
 
