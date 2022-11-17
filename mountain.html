@@ -15,9 +15,11 @@
         <a href="mountain-select.html">Mountains</a>
         <a href="search.html">Search for Parks</a>
       </div>
-      <h1>Mountains</h1>
-    <ol>
+      <div class="parkBG">
+      <h1 class="rock6">Mountains</h1>
+    <ol class="rockList1">
     </ol>
+</div>
 <script>
     console.log(mountainsArray)
     function bigRocks(){
@@ -26,7 +28,7 @@
             let list = document.querySelector('ol')
             let nameLi= document.createElement('ul') 
             let a= i+1
-            list.appendChild(nameLi).innerText=`${a} ${mountainsArray[i].name}`;
+            list.appendChild(nameLi).innerText=`${a}: ${mountainsArray[i].name}`;
             //image tag that wont work
             let imgLiFix= document.createElement('li');
             let imgLi= document.createElement('img');

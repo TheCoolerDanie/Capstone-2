@@ -17,26 +17,27 @@
       <a href="mountain-select.html">Mountains</a>
       <a href="search.html">Search for Parks</a>
       </div>
-      <form action="/action_page.php">
+      <div class="parkBG">
+      <form class="parkForm" action="/action_page.php">
         <label for="locat">Choose a Location</label>
-        <select name="location1" id="location1">
+        <select class="parkForm3" name="location1" id="location1">
           <option value="">Default</option>
         </select>
         <br><br>
 
       </form>
-      <form action="/action_page.php">
+      <form class="parkForm" action="/action_page.php">
         <label for="locat2">Choose a Type</label>
-        <select name="location2" id="location2">
+        <select class="parkForm3" name="location2" id="location2">
           <option value="">Default</option>
         </select>
         <br><br>
-        <input id="search" type="button" value="Search" onclick="mountSelec();" />
+        <input class="parkBtn" id="search" type="button" value="Search" onclick="mountSelec();" />
       </form>
-      <h1>Park List</h1>
-      <ul>
+      <h1 class="rock6">Park List</h1>
+      <ul class="rockList1">
       </ul>
-      
+      </div>
 <script>
     let locatMenu=document.getElementById('location1')
 // let moreInfoBtn=document.getElementById('moreInfo')

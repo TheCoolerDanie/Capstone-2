@@ -4,10 +4,9 @@
     background-color:rgb(88, 148, 64);
     font-style: italic;
     color: rgb(72, 75, 75);
-
-    margin-top: 1%;
+    margin-left: 3%;
         position:relative;
-        width: 220px;
+        width: 250px;
         height: auto;
         overflow:hidden;
         clip-path: polygon(
@@ -30,8 +29,9 @@
     border:10px rgb(102, 185, 64) solid;
     background-color:rgb(88, 148, 64);
     color: rgb(72, 75, 75);
-    width: 180px;
+    width: 190px;
     margin-top: 1%;
+    margin-left: 3%;
     position:relative;
     overflow:hidden;
     clip-path: polygon(
@@ -51,77 +51,41 @@
     background-color:rgb(136, 206, 108);
     margin-top: 1%;
     max-width: 95%;
-    color: rgb(37, 37, 37);
-                
-}
-.rock0{
-
-    background: -moz-linear-gradient(90deg, rgba(227,150,46,1) 0%, rgba(20,10,13,1) 42%, rgba(20,10,13,1) 78%, rgba(187,92,126,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(227,150,46,1) 0%, rgba(20,10,13,1) 42%, rgba(20,10,13,1) 78%, rgba(187,92,126,1) 100%);
-    background: -o-linear-gradient(90deg, rgba(227,150,46,1) 0%, rgba(20,10,13,1) 42%, rgba(20,10,13,1) 78%, rgba(187,92,126,1) 100%);
-    background: (90deg, rgba(227,150,46,1) 0%, rgba(20,10,13,1) 42%, rgba(20,10,13,1) 78%, rgba(187,92,126,1) 100%);
-    background: linear-gradient(0deg, rgba(227,150,46,1) 0%, rgba(20,10,13,1) 42%, rgba(20,10,13,1) 78%, rgba(187,92,126,1) 100%);
-    background-attachment: fixed;
+    font-size: 18px;
+    color: rgb(47, 62, 54);
+    margin-left: 3%;
 }
 .rock4{
     padding: 20px 25px;
 }
-.rock5{
-    background: -moz-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: -webkit-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: -o-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: (90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: linear-gradient(0deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                color: rgb(76, 16, 40);
-                position:relative;
-                overflow:hidden;
-                clip-path: polygon(
-                  0 10%,
-                  10% 0,
-                  90% 0,
-                  100% 10%,
-                  100% 90%,
-                  90% 100%,
-                  10% 100%,
-                  0% 90%,
-                  0% 10%)
-}
+
 a:link {
     color: rgb(201, 255, 166);
+    margin-left: 3%;
   }
   a:visited {
-    color: rgb(183, 202, 181);
+    color: rgb(143, 155, 161);
+    margin-left: 3%;
   }
 .rock6{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(134, 19, 61);  
-    font-size: 24px;
-    text-decoration: underline;
-}
-.rocklog{
+    color: rgb(136, 235, 93);  
+    font-size: 30px;
+    font-style: bold;
+    background-color: rgb(54, 79, 64);
+    margin-left: 5%;
     
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                border:10px rgb(165, 17, 76) solid;
-                background: -moz-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: -webkit-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: -o-linear-gradient(90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: (90deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-                background: linear-gradient(0deg, rgba(249,176,78,1) 0%, rgba(255,159,193,1) 100%);
-    display: block;
-    width: 350px;
 }
-.rocktext {
-  width: 50px;}
-
   .topnav{
-    max-width: 75%;
-    background-color: darkblue;
+    background-color: rgb(43, 58, 117);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 3px solid rgb(119, 153, 181);
   }
   .parkInput {
     background-color: rgb(77, 168, 138);
     margin-left: 5%;
     margin-top: 1%;
+    background-color: rgb(54, 79, 64);
   }
 
   .results{
@@ -129,3 +93,49 @@ a:link {
     margin-left: 5%;
     max-width: 75%;
   }
+  .rockList1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(54, 79, 64);
+    color: rgb(131, 217, 97);
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  html {
+    background-color: rgb(20, 30, 24);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+.parkBtn{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border:3px rgb(102, 185, 64) dashed;
+    background-color:rgb(88, 148, 64);
+    font-style: italic;
+    color: rgb(72, 75, 75);
+    margin-left: 3%;
+}
+.parkForm{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(54, 79, 64);
+  color: rgb(131, 217, 97);
+display: block;
+margin-left: 3%;
+}
+.parkBG{
+  background-color: rgb(54, 79, 64);
+}
+.parkForm2{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(116, 170, 138);
+  color: rgb(46, 60, 40);
+display: block;
+margin-left: 3%;
+margin-bottom: 10px;
+}
+.parkForm3{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(116, 170, 138);
+  color: rgb(46, 60, 40);
+display: block;
+margin-left: 3%;
+}
+
